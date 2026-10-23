@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="page-1" name="Valid-ready pipeline">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="900" pageHeight="310">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="src" value="Input" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="110" width="130" height="65" />
+        </mxCell>
+        <mxCell id="s0" value="Stage 0&#10;Register" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="250" y="110" width="150" height="65" />
+        </mxCell>
+        <mxCell id="s1" value="Stage 1&#10;Register" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="110" width="150" height="65" />
+        </mxCell>
+        <mxCell id="sink" value="Output" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="110" width="130" height="65" />
+        </mxCell>
+        <mxCell id="d0" value="data + valid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="src" target="s0">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="d1" value="data + valid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="s0" target="s1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="d2" value="data + valid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="s1" target="sink">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ready" value="ready / backpressure" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;strokeColor=#334155;dashed=1;" edge="1" parent="1" source="sink" target="src">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="795" y="250" />
+              <mxPoint x="95" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

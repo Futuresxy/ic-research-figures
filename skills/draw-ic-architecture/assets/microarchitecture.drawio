@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="page-1" name="Illustrative pipelined datapath">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1000" pageHeight="400">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="in" value="A / B" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="20" y="145" width="90" height="65" />
+        </mxCell>
+        <mxCell id="unpack" value="Unpack" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="150" y="145" width="110" height="65" />
+        </mxCell>
+        <mxCell id="r1" value="S1" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="300" y="145" width="35" height="65" />
+        </mxCell>
+        <mxCell id="mul" value="Multiply" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="375" y="145" width="120" height="65" />
+        </mxCell>
+        <mxCell id="r2" value="S2" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="535" y="145" width="35" height="65" />
+        </mxCell>
+        <mxCell id="reduce" value="Align / reduce" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="610" y="145" width="140" height="65" />
+        </mxCell>
+        <mxCell id="acc" value="Accumulator" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#DDEBF7;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="145" width="150" height="65" />
+        </mxCell>
+        <mxCell id="c" value="C input" style="rounded=0;whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=14;strokeColor=#334155;strokeWidth=1.2;fillColor=#ECEFF1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="30" width="150" height="55" />
+        </mxCell>
+        <mxCell id="a" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="in" target="unpack">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="b" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="unpack" target="r1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="d" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="r1" target="mul">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="f" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="mul" target="r2">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="g" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="r2" target="reduce">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="h" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#334155;" edge="1" parent="1" source="reduce" target="acc">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="cfeed" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#334155;" edge="1" parent="1" source="c" target="acc">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="feedback" value="registered feedback" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontFamily=Arial;fontSize=12;labelBackgroundColor=#FFFFFF;exitX=0.75;exitY=1;entryX=0.25;entryY=1;strokeColor=#334155;" edge="1" parent="1" source="acc" target="acc">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="912.5" y="300" />
+              <mxPoint x="837.5" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

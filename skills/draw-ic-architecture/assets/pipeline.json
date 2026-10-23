@@ -1,0 +1,91 @@
+{
+  "name": "Valid-ready pipeline",
+  "width": 900,
+  "height": 310,
+  "nodes": [
+    {
+      "id": "src",
+      "label": "Input",
+      "x": 30,
+      "y": 110,
+      "w": 130,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "s0",
+      "label": "Stage 0\nRegister",
+      "x": 250,
+      "y": 110,
+      "w": 150,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "s1",
+      "label": "Stage 1\nRegister",
+      "x": 490,
+      "y": 110,
+      "w": 150,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "sink",
+      "label": "Output",
+      "x": 730,
+      "y": 110,
+      "w": 130,
+      "h": 65,
+      "role": "compute"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d0",
+      "source": "src",
+      "target": "s0",
+      "label": "data + valid",
+      "kind": "data"
+    },
+    {
+      "id": "d1",
+      "source": "s0",
+      "target": "s1",
+      "label": "data + valid",
+      "kind": "data"
+    },
+    {
+      "id": "d2",
+      "source": "s1",
+      "target": "sink",
+      "label": "data + valid",
+      "kind": "data"
+    },
+    {
+      "id": "ready",
+      "source": "sink",
+      "target": "src",
+      "label": "ready / backpressure",
+      "kind": "control",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        1
+      ],
+      "waypoints": [
+        [
+          795,
+          250
+        ],
+        [
+          95,
+          250
+        ]
+      ]
+    }
+  ]
+}

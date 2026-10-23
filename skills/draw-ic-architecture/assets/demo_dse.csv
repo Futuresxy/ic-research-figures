@@ -1,0 +1,8 @@
+design,family,area_mm2,latency_ms,feasible
+A1,Family A,10,9,true
+A2,Family A,14,6,true
+A3,Family A,18,5,true
+B1,Family B,12,8,true
+B2,Family B,16,4,true
+B3,Family B,22,3,true
+B4,Family B,24,2,false

@@ -1,0 +1,196 @@
+{
+  "name": "Illustrative 2x2 PE mesh",
+  "width": 800,
+  "height": 490,
+  "nodes": [
+    {
+      "id": "a",
+      "label": "A buffer",
+      "x": 20,
+      "y": 170,
+      "w": 130,
+      "h": 65,
+      "role": "memory"
+    },
+    {
+      "id": "b",
+      "label": "B buffer",
+      "x": 340,
+      "y": 20,
+      "w": 140,
+      "h": 60,
+      "role": "memory"
+    },
+    {
+      "id": "mesh",
+      "label": "2 × 2 PE group",
+      "x": 210,
+      "y": 120,
+      "w": 420,
+      "h": 330,
+      "role": "group"
+    },
+    {
+      "id": "p00",
+      "label": "PE (0,0)",
+      "x": 40,
+      "y": 70,
+      "w": 120,
+      "h": 65,
+      "role": "compute",
+      "parent": "mesh"
+    },
+    {
+      "id": "p01",
+      "label": "PE (0,1)",
+      "x": 250,
+      "y": 70,
+      "w": 120,
+      "h": 65,
+      "role": "compute",
+      "parent": "mesh"
+    },
+    {
+      "id": "p10",
+      "label": "PE (1,0)",
+      "x": 40,
+      "y": 220,
+      "w": 120,
+      "h": 65,
+      "role": "compute",
+      "parent": "mesh"
+    },
+    {
+      "id": "p11",
+      "label": "PE (1,1)",
+      "x": 250,
+      "y": 220,
+      "w": 120,
+      "h": 65,
+      "role": "compute",
+      "parent": "mesh"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ain",
+      "source": "a",
+      "target": "p00",
+      "label": "A",
+      "kind": "data"
+    },
+    {
+      "id": "bin",
+      "source": "b",
+      "target": "p00",
+      "label": "B",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ],
+      "waypoints": [
+        [
+          410,
+          100
+        ],
+        [
+          310,
+          100
+        ]
+      ]
+    },
+    {
+      "id": "arow",
+      "source": "p00",
+      "target": "p01",
+      "label": "A",
+      "kind": "data"
+    },
+    {
+      "id": "arow2",
+      "source": "p10",
+      "target": "p11",
+      "label": "A",
+      "kind": "data"
+    },
+    {
+      "id": "bcol",
+      "source": "p00",
+      "target": "p10",
+      "label": "B",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "bcol2",
+      "source": "p01",
+      "target": "p11",
+      "label": "B",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "ain2",
+      "source": "a",
+      "target": "p10",
+      "label": "A",
+      "exit": [
+        1,
+        0.8
+      ],
+      "entry": [
+        0,
+        0.5
+      ],
+      "waypoints": [
+        [
+          180,
+          222
+        ],
+        [
+          180,
+          372.5
+        ]
+      ]
+    },
+    {
+      "id": "bin2",
+      "source": "b",
+      "target": "p01",
+      "label": "B",
+      "exit": [
+        1,
+        0.5
+      ],
+      "entry": [
+        0.5,
+        0
+      ],
+      "waypoints": [
+        [
+          520,
+          50
+        ]
+      ]
+    }
+  ]
+}

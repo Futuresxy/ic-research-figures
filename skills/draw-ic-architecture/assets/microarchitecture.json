@@ -1,0 +1,163 @@
+{
+  "name": "Illustrative pipelined datapath",
+  "width": 1000,
+  "height": 400,
+  "nodes": [
+    {
+      "id": "in",
+      "label": "A / B",
+      "x": 20,
+      "y": 145,
+      "w": 90,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "unpack",
+      "label": "Unpack",
+      "x": 150,
+      "y": 145,
+      "w": 110,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "r1",
+      "label": "S1",
+      "x": 300,
+      "y": 145,
+      "w": 35,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "mul",
+      "label": "Multiply",
+      "x": 375,
+      "y": 145,
+      "w": 120,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "r2",
+      "label": "S2",
+      "x": 535,
+      "y": 145,
+      "w": 35,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "reduce",
+      "label": "Align / reduce",
+      "x": 610,
+      "y": 145,
+      "w": 140,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "acc",
+      "label": "Accumulator",
+      "x": 800,
+      "y": 145,
+      "w": 150,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "c",
+      "label": "C input",
+      "x": 800,
+      "y": 30,
+      "w": 150,
+      "h": 55,
+      "role": "io"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a",
+      "source": "in",
+      "target": "unpack",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "b",
+      "source": "unpack",
+      "target": "r1",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "d",
+      "source": "r1",
+      "target": "mul",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "f",
+      "source": "mul",
+      "target": "r2",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "g",
+      "source": "r2",
+      "target": "reduce",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "h",
+      "source": "reduce",
+      "target": "acc",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "cfeed",
+      "source": "c",
+      "target": "acc",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "feedback",
+      "source": "acc",
+      "target": "acc",
+      "label": "registered feedback",
+      "kind": "data",
+      "exit": [
+        0.75,
+        1
+      ],
+      "entry": [
+        0.25,
+        1
+      ],
+      "waypoints": [
+        [
+          912.5,
+          300
+        ],
+        [
+          837.5,
+          300
+        ]
+      ]
+    }
+  ]
+}

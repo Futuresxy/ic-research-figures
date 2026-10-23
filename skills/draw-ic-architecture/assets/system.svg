@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <rect width="100%" height="100%" fill="white" />
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155" />
+    </marker>
+  </defs>
+  <g id="hbm">
+    <rect stroke-width="1.2" x="20" y="200" width="150" height="70" fill="#E6F2E8" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="95.0" y="240.0" fill="#17212B">External memory</text>
+  </g>
+  <g id="die">
+    <rect stroke-width="1.2" x="220" y="30" width="650" height="420" fill="#FFFFFF" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="545.0" y="50" fill="#17212B">Accelerator die</text>
+  </g>
+  <g id="shared">
+    <rect stroke-width="1.2" x="250" y="200" width="140" height="70" fill="#E6F2E8" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="320.0" y="240.0" fill="#17212B">Shared buffer</text>
+  </g>
+  <g id="cluster">
+    <rect stroke-width="1.2" x="460" y="100" width="370" height="310" fill="#FFFFFF" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="645.0" y="120" fill="#17212B">Compute cluster</text>
+  </g>
+  <g id="local">
+    <rect stroke-width="1.2" x="490" y="160" width="140" height="60" fill="#E6F2E8" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="560.0" y="195.0" fill="#17212B">Local buffer</text>
+  </g>
+  <g id="array">
+    <rect stroke-width="1.2" x="490" y="300" width="140" height="60" fill="#DDEBF7" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="560.0" y="335.0" fill="#17212B">PE array</text>
+  </g>
+  <g id="control">
+    <rect stroke-width="1.2" x="680" y="230" width="120" height="60" fill="#FCE8D5" stroke="#334155" />
+    <text font-family="Arial,sans-serif" font-size="14" text-anchor="middle" x="740.0" y="265.0" fill="#17212B">Controller</text>
+  </g>
+  <polyline id="mem" points="170,235.0 210.0,235.0 210.0,235.0 250,235.0" fill="none" stroke="#334155" stroke-width="1.3" marker-end="url(#arrow)" />
+  <polyline id="load" points="390,235.0 440.0,235.0 440.0,190.0 490,190.0" fill="none" stroke="#334155" stroke-width="1.3" marker-end="url(#arrow)" />
+  <polyline id="feed" points="560.0,220 560.0,220 560.0,300 560.0,300" fill="none" stroke="#334155" stroke-width="1.3" marker-end="url(#arrow)" />
+  <polyline id="ctrl" points="680,260.0 655.0,260.0 655.0,330.0 630,330.0" fill="none" stroke="#334155" stroke-width="1.3" marker-end="url(#arrow)" stroke-dasharray="5 4" />
+</svg>

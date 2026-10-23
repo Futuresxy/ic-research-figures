@@ -1,0 +1,129 @@
+{
+  "name": "System hierarchy",
+  "width": 900,
+  "height": 480,
+  "nodes": [
+    {
+      "id": "hbm",
+      "label": "External memory",
+      "x": 20,
+      "y": 200,
+      "w": 150,
+      "h": 70,
+      "role": "memory"
+    },
+    {
+      "id": "die",
+      "label": "Accelerator die",
+      "x": 220,
+      "y": 30,
+      "w": 650,
+      "h": 420,
+      "role": "group"
+    },
+    {
+      "id": "shared",
+      "label": "Shared buffer",
+      "x": 30,
+      "y": 170,
+      "w": 140,
+      "h": 70,
+      "role": "memory",
+      "parent": "die"
+    },
+    {
+      "id": "cluster",
+      "label": "Compute cluster",
+      "x": 240,
+      "y": 70,
+      "w": 370,
+      "h": 310,
+      "role": "group",
+      "parent": "die"
+    },
+    {
+      "id": "local",
+      "label": "Local buffer",
+      "x": 30,
+      "y": 60,
+      "w": 140,
+      "h": 60,
+      "role": "memory",
+      "parent": "cluster"
+    },
+    {
+      "id": "array",
+      "label": "PE array",
+      "x": 30,
+      "y": 200,
+      "w": 140,
+      "h": 60,
+      "role": "compute",
+      "parent": "cluster"
+    },
+    {
+      "id": "control",
+      "label": "Controller",
+      "x": 220,
+      "y": 130,
+      "w": 120,
+      "h": 60,
+      "role": "control",
+      "parent": "cluster"
+    }
+  ],
+  "edges": [
+    {
+      "id": "mem",
+      "source": "hbm",
+      "target": "shared",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "load",
+      "source": "shared",
+      "target": "local",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        1,
+        0.5
+      ],
+      "entry": [
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": "feed",
+      "source": "local",
+      "target": "array",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "ctrl",
+      "source": "control",
+      "target": "array",
+      "label": "",
+      "kind": "control",
+      "exit": [
+        0,
+        0.5
+      ],
+      "entry": [
+        1,
+        0.5
+      ]
+    }
+  ]
+}

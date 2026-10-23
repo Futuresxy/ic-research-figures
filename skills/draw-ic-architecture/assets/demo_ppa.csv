@@ -1,0 +1,7 @@
+design,component,value,unit
+Design A,Compute,4,mm2
+Design A,Memory,5,mm2
+Design A,Control,1,mm2
+Design B,Compute,3,mm2
+Design B,Memory,6,mm2
+Design B,Control,1.5,mm2

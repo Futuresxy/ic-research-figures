@@ -1,0 +1,211 @@
+{
+  "name": "Modeling and design-space exploration",
+  "width": 920,
+  "height": 510,
+  "nodes": [
+    {
+      "id": "work",
+      "label": "Workload / graph",
+      "x": 30,
+      "y": 60,
+      "w": 170,
+      "h": 65,
+      "role": "io"
+    },
+    {
+      "id": "hw",
+      "label": "Hardware candidates",
+      "x": 30,
+      "y": 200,
+      "w": 170,
+      "h": 65,
+      "role": "io"
+    },
+    {
+      "id": "map",
+      "label": "Mapping search",
+      "x": 280,
+      "y": 60,
+      "w": 170,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "sim",
+      "label": "Performance model",
+      "x": 530,
+      "y": 60,
+      "w": 180,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "cost",
+      "label": "Area / energy model",
+      "x": 280,
+      "y": 200,
+      "w": 180,
+      "h": 65,
+      "role": "compute"
+    },
+    {
+      "id": "filter",
+      "label": "Constraint filter",
+      "x": 530,
+      "y": 200,
+      "w": 180,
+      "h": 65,
+      "role": "control"
+    },
+    {
+      "id": "front",
+      "label": "Pareto results",
+      "x": 740,
+      "y": 330,
+      "w": 150,
+      "h": 65,
+      "role": "io"
+    },
+    {
+      "id": "ref",
+      "label": "Measurements",
+      "x": 30,
+      "y": 350,
+      "w": 170,
+      "h": 65,
+      "role": "io"
+    },
+    {
+      "id": "val",
+      "label": "Calibration / validation",
+      "x": 280,
+      "y": 350,
+      "w": 220,
+      "h": 65,
+      "role": "control"
+    }
+  ],
+  "edges": [
+    {
+      "id": "w",
+      "source": "work",
+      "target": "map",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "hm",
+      "source": "hw",
+      "target": "map",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        1,
+        0.3
+      ],
+      "entry": [
+        0,
+        0.8
+      ],
+      "waypoints": [
+        [
+          240,
+          219.5
+        ],
+        [
+          240,
+          112
+        ]
+      ]
+    },
+    {
+      "id": "hc",
+      "source": "hw",
+      "target": "cost",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "ms",
+      "source": "map",
+      "target": "sim",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "sf",
+      "source": "sim",
+      "target": "filter",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        0.5,
+        1
+      ],
+      "entry": [
+        0.5,
+        0
+      ]
+    },
+    {
+      "id": "cf",
+      "source": "cost",
+      "target": "filter",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "fp",
+      "source": "filter",
+      "target": "front",
+      "label": "",
+      "kind": "data",
+      "exit": [
+        1,
+        0.5
+      ],
+      "entry": [
+        0.5,
+        0
+      ],
+      "waypoints": [
+        [
+          815,
+          232.5
+        ]
+      ]
+    },
+    {
+      "id": "rv",
+      "source": "ref",
+      "target": "val",
+      "label": "",
+      "kind": "data"
+    },
+    {
+      "id": "vs",
+      "source": "val",
+      "target": "sim",
+      "label": "calibrate",
+      "kind": "control",
+      "exit": [
+        1,
+        0.5
+      ],
+      "entry": [
+        1,
+        0.5
+      ],
+      "waypoints": [
+        [
+          900,
+          382.5
+        ],
+        [
+          900,
+          92.5
+        ]
+      ]
+    }
+  ]
+}

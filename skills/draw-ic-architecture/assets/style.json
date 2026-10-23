@@ -1,0 +1,14 @@
+{
+  "font": "DejaVu Sans",
+  "figsize": [
+    3.6,
+    2.8
+  ],
+  "ylabel": "Area",
+  "colors": [
+    "#0072B2",
+    "#E69F00",
+    "#009E73",
+    "#CC79A7"
+  ]
+}
