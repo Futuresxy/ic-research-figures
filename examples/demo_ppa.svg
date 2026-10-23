@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <rect width="720" height="480" fill="white" />
+  <line x1="90" y1="395.0" x2="670" y2="395.0" stroke="#E5E7EB" />
+  <text x="78" y="399.0" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">0</text>
+  <line x1="90" y1="335.0" x2="670" y2="335.0" stroke="#E5E7EB" />
+  <text x="78" y="339.0" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">2.35</text>
+  <line x1="90" y1="275.0" x2="670" y2="275.0" stroke="#E5E7EB" />
+  <text x="78" y="279.0" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">4.7</text>
+  <line x1="90" y1="215.0" x2="670" y2="215.0" stroke="#E5E7EB" />
+  <text x="78" y="219.0" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">7.06</text>
+  <line x1="90" y1="154.99999999999997" x2="670" y2="154.99999999999997" stroke="#E5E7EB" />
+  <text x="78" y="158.99999999999997" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">9.41</text>
+  <line x1="90" y1="95.0" x2="670" y2="95.0" stroke="#E5E7EB" />
+  <text x="78" y="99.0" text-anchor="end" font-family="Arial,sans-serif" font-size="12" fill="#222222">11.8</text>
+  <path d="M 90 95 V 395 H 670" fill="none" stroke="#333333" />
+  <text x="380.0" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#222222" />
+  <text x="25" y="245.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#222222" transform="rotate(-90 25 245.0)">Area (mm2)</text>
+  <rect x="90" y="15" width="12" height="12" fill="#0072B2" />
+  <text x="110" y="25" text-anchor="start" font-family="Arial,sans-serif" font-size="12" fill="#222222">Compute</text>
+  <rect x="280" y="15" width="12" height="12" fill="#E69F00" />
+  <text x="300" y="25" text-anchor="start" font-family="Arial,sans-serif" font-size="12" fill="#222222">Memory</text>
+  <rect x="470" y="15" width="12" height="12" fill="#009E73" />
+  <text x="490" y="25" text-anchor="start" font-family="Arial,sans-serif" font-size="12" fill="#222222">Control</text>
+  <rect x="155.25" y="292.9591836734694" width="159.5" height="102.0408163265306" fill="#0072B2" stroke="white" stroke-width=".5" />
+  <rect x="155.25" y="165.40816326530614" width="159.5" height="127.55102040816325" fill="#E69F00" stroke="white" stroke-width=".5" />
+  <rect x="155.25" y="139.8979591836735" width="159.5" height="25.51020408163265" fill="#009E73" stroke="white" stroke-width=".5" />
+  <text x="235.0" y="419" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222222">Design A</text>
+  <rect x="445.25" y="318.46938775510205" width="159.5" height="76.53061224489795" fill="#0072B2" stroke="white" stroke-width=".5" />
+  <rect x="445.25" y="165.40816326530614" width="159.5" height="153.0612244897959" fill="#E69F00" stroke="white" stroke-width=".5" />
+  <rect x="445.25" y="127.14285714285717" width="159.5" height="38.265306122448976" fill="#009E73" stroke="white" stroke-width=".5" />
+  <text x="525.0" y="419" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#222222">Design B</text>
+</svg>

@@ -1,0 +1,1 @@
+Synthetic demonstration only; not experimental evidence. Area–latency design-space sample, minimizing both objectives; dashed line connects sampled nondominated feasible points and does not imply realizable intermediate designs.

@@ -1,0 +1,24 @@
+{
+  "input_file": "demo_ppa.csv",
+  "sha256": "aba7efcfd6ac7e407ab4891bcd7f80acc6e105ab7fb9bccdb131e82876304e86",
+  "kind": "breakdown",
+  "backend": "svg",
+  "synthetic_demo": true,
+  "style": {
+    "font": "DejaVu Sans",
+    "figsize": [
+      3.6,
+      2.8
+    ],
+    "ylabel": "Area",
+    "colors": [
+      "#0072B2",
+      "#E69F00",
+      "#009E73",
+      "#CC79A7"
+    ]
+  },
+  "objectives": {},
+  "pareto_designs": [],
+  "notes": "Demo values are not measured hardware results."
+}

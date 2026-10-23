@@ -1,0 +1,20 @@
+{
+  "input_file": "demo_dse.csv",
+  "sha256": "e0e715e4101caa5489c9ad3be99e50e852e9063c1f8588c230359124a1424f3f",
+  "kind": "dse",
+  "backend": "svg",
+  "synthetic_demo": true,
+  "style": {},
+  "objectives": {
+    "area_mm2": "min",
+    "latency_ms": "min"
+  },
+  "pareto_designs": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "notes": "Demo values are not measured hardware results."
+}
