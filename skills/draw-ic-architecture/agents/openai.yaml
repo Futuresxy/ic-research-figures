@@ -1,0 +1,4 @@
+interface:
+  display_name: "IC Research Figures"
+  short_description: "Editable architecture diagrams and reproducible IC plots"
+  default_prompt: "Use $draw-ic-architecture to create editable chip diagrams and reproducible Python research plots."
